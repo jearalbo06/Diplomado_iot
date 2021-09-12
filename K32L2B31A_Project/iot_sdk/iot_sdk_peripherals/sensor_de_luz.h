@@ -19,7 +19,6 @@
 /*******************************************************************************
  * Public prototypes
  ******************************************************************************/
-void sensorDeLuzIniciarCaptura(void)
-void sensorDeLuzEsperarResultado(void)
+float SensorDeLuzObtenerDatoADC(void);
 
 #endif /* IOT_SDK_PERIPHERALS_SENSOR_DE_LUZ_H_ */
