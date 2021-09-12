@@ -11,6 +11,7 @@
 ******************************************************************************/
 #include "leds.h"
 #include "fsl_gpio.h"
+#include "board.h"
 /*******************************************************************************
 * Definitions
 ******************************************************************************/
@@ -51,15 +52,20 @@ GPIO_PinWrite(GPIOD,5,1);
 }
 /*--------------------------------------------------------------------------------*/
 
- void encender_led_rojo(){
+//void encender_led_rojo(){
 //enciende led verde
-GPIO_PinWrite(GPIOE,31,0);
-}
+//GPIO_PinWrite(GPIOE,31,0);
+//}
 
  /*--------------------------------------------------------------------------------*/
 
- void apagar_led_rojo(){
+// void apagar_led_rojo(){
 //apaga el led verde
-GPIO_PinWrite(GPIOE,31,1);
-}
+//GPIO_PinWrite(GPIOE,31,1);
+//}
 
+ /*--------------------------------------------------------------------------------*/
+ void toggle_led_rojo(){
+     //encender led rojo
+     GPIO_PortToggle(GPIOE, 1U<<31);
+ }
